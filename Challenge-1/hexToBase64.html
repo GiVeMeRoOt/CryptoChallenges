@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<script>
+			var input="49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"; //Input hex string
+			document.write("Input String is: "+input);
+			document.write("<br>");
+			var hex = input.toString();  //force conversion
+			var str = '';
+			for (var i = 0; i < hex.length; i += 2) //Take 2 chars and convert to ascii
+			str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+			document.write("Obtained string is: "+str);
+			var B64=window.btoa(str);  //Base64 encoding
+			document.write("<br>");
+			document.write("Final Base64 string is: "+B64);
+		</script>
+	</body>
+</html>
