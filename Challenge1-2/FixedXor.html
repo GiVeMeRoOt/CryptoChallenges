@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+			var input1 = "1c0111001f010100061a024b53535009181c";
+			var input2 = "686974207468652062756c6c277320657965";
+			//Javascript allows XOR operation only on integers. Thus, hex had to be converted to integer and the XOR operation had to be performed.
+			var str = '';
+			for (var i = 0; i < input1.length; i += 2) 
+			{
+				var str1 = parseInt(input1.substr(i, 2), 16);
+				var str2 = parseInt(input2.substr(i, 2), 16);
+				var str3 = str1 ^ str2;
+				str3 = str3.toString(16);
+				str +=str3;
+			}
+			document.write("<br> Xor output is: "+str);
+		</script>
+	</body >
+</html>
