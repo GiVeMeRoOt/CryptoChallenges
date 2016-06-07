@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+		var input = [
+		"Burning 'em, if you ain't quick and nimble\n",
+		"I go crazy when I hear a cymbal"].join("");
+		var key = "ICE";
+		var output = "";
+		var i=0;
+		while(i < input.length)
+		{
+			var temp = input.charCodeAt(i);
+			output += (key.charCodeAt(i%3) ^ temp).toString(16);
+			i++;
+		}
+		document.write("The final result is: 0"+output);
+		</script>
+	</body>
+</html>
