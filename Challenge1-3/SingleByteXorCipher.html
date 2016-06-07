@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script>
+			var input = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736";
+			document.write("The input string is: "+input);
+			for(var j=0;j<=127;j++)
+			{
+				var str = "";
+				for (var i = 0; i < input.length; i += 2) 
+				{
+					var str1 = parseInt(input.substr(i, 2), 16); //convert hex to int.
+					var str2 = str1 ^ j;
+					str2 = String.fromCharCode(str2);  //Convert decimal to corresponding ascii character.
+					str +=str2;
+				}
+				document.write("<br>"+j+"->The equivalent integer is: "+str);
+			}
+		</script>
+		//Answer is: Cooking MC's like a pound of bacon when xored with int 88 which is "X" in ascii.
+	</body>
+</html>
