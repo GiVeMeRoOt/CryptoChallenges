@@ -17,5 +17,6 @@ public class FixedXor {
 		}
 		String result = new BigInteger(1, decodedHex3).toString(16);
 		System.out.println("\nThe final result is: "+result);
+		System.out.println("The corresponding ascii string is: "+new String(decodedHex3));
 	}
 }
